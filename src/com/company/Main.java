@@ -9,6 +9,9 @@ public class Main {
         Turtle[] turtles = new Turtle[5];
         Eagle[] eagles = new Eagle[5];
         for (Animal animal : animals) {
+
+
+
 //                if (animal.getClass().getName().equals("com.company.Shark")){
 //            ((Shark)animal).attack();  }
 //        else if (animal.getClass().getName().equals("com.company.Turtle")){
@@ -17,15 +20,23 @@ public class Main {
 //                ((Eagle)animal).fly(); }
             if (animal instanceof Shark) {
                 ((Shark) animal).attack();
-                sharks[0] = (Shark) animal;
-            } else if (animal instanceof Turtle) {
-                ((Turtle) animal).swim();
-                turtles[0] = (Turtle) animal;
+                    for (Shark shark: sharks ) {
+                    shark = (Shark) animal;
+                    System.out.println(shark);
+                }
+           } else if (animal instanceof Turtle) {
+                 ((Turtle) animal).swim();
+                    for (Turtle turtle : turtles) {
+                    turtle = (Turtle) animal;
+                    System.out.println(turtle);
+                }
             } else if (animal instanceof Eagle) {
-                ((Eagle) animal).fly();
-                eagles[0] = (Eagle) animal;
-            }
-
+                 ((Eagle) animal).fly();
+                    for (Eagle eagle : eagles) {
+                    eagle = (Eagle) animal;
+                    System.out.println(eagle);
+                }
+          }
         }
-    }
-}
+        }
+       }
